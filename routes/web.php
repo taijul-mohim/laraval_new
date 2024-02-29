@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Testcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 Route::get('taijul', function () {
     return view('new');
 });
+Route::get('/users',[Testcontroller::class,'index']);
