@@ -1,5 +1,7 @@
 <?php
-use App\Http\Controllers\ContactController;
+
+use App\Http\Controllers\userController;
+use App\Http\Controllers\userControllerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('taijul', function () {
-    return view('new');
-});
-Route::get('/contact',[ContactController::class,'index']);
+// Route::get('/users', function () {
+//     return view('user.index');
+// });
+ 
+Route::get('register/seeker',[userController::class,'createseeker']);
